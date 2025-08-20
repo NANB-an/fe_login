@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = 'https://be-login-r9ax.onrender.com/';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
