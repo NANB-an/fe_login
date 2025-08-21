@@ -8,14 +8,14 @@ const ProtectedRoute = ({ children }) => {
   if (loading) {
     return (
       <div className="loading-container">
-        <div className="loading-spinner">Loading...</div>
+        <div className="loading-spinner"></div>
       </div>
     );
   }
 
   return loading ? (
   <div className="loading-container">
-    <div className="loading-spinner">Loading...</div>
+    <div className="loading-spinner"></div>
   </div>
     ) : user ? (
     children
