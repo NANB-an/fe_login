@@ -1,12 +1,36 @@
-# React + Vite
+# fe_login
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend authentication system built with React and Vite, designed to handle user registration, login, and user management. The main branch is for production-ready code, and the dev branch is for local testing and development. It includes user registration with email and password, user login and authentication, password hashing for security, session management, and environment-based configuration via `.env`.
 
-Currently, two official plugins are available:
+To install and set up the project, follow these steps:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Clone the repository and enter the folder**:  
+   `git clone https://github.com/NANB-an/fe_login.git && cd fe_login`
 
-## Expanding the ESLint configuration
+2. **Install dependencies**:  
+   `npm install`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. **Copy the environment file**:  
+   `cp .env.example .env`
+
+4. **Configure your `.env` file**:  
+   - For **local testing**, set `VITE_API_URL=http://127.0.0.1:8000/api`.  
+   - For **production**, set `VITE_API_URL=<your-production-api-url>`.  
+   - Set `VITE_SANCTUM_STATEFUL_DOMAINS=localhost` for local testing or your frontend domain for production.
+
+5. **Start the development server**:  
+   `npm run dev`  
+   The frontend will be accessible at `http://localhost:5173`.
+
+**API Endpoints**:  
+- `POST /api/register` – Register a new user  
+- `POST /api/login` – Login a user  
+- `POST /api/logout` – Logout the authenticated user  (protected route)  
+- `GET /api/users` – List users (protected route)  
+
+
+**Testing**:  
+Run tests using:  
+`npm run test`
+
+This project is open-source under the MIT License.
